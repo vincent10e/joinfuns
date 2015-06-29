@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Joinfuns
   class Application < Rails::Application
+    config.i18n.available_locales = [:"zh-TW"]
     config.i18n.default_locale = "zh-TW"
     config.assets.precompile += %w(.svg .eot .woff .ttf .woff2 .otf)
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","fontawesome","fonts")

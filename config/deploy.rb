@@ -1,25 +1,16 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'AppName'
-set :repo_url, 'git@github.com:USERNAME/REPONAME.git'
-set :deploy_to, '/home/USERNAME/PATH_HERE'
+set :application, 'joinfuns'
+set :repo_url, 'git@github.com:oracle-design/joinfuns.git'
+set :deploy_to, '/home/deployer/joinfuns-beta'
 
 set :linked_files, %w{config/database.yml}
 set :linked_files, %w{config/database.yml config/application.yml config/secrets.yml}
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-
-# Hipchat
-require 'hipchat/capistrano'
-
-set :hipchat_token, ""
-set :hipchat_room_name, ""
-set :hipchat_announce, true # notify users?
-set :hipchat_color, 'green' #finished deployment message color
-set :hipchat_failed_color, 'red' #cancelled deployment message color
 
 # install bower components before assets precompile
 before "deploy:assets:precompile", "bower:install"
