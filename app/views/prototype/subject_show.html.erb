@@ -1,0 +1,69 @@
+<%= render partial: 'common/header' %>
+
+<div class="subject-detail-wrapper">
+  <div class="subjects-container">
+    <div class="navigation-option">
+      <%= link_to '< Back To List', subjects_path, class: 'back-to-list waves-effect waves-light btn left' %>
+    </div>
+
+    <div class="subject-info-banner">
+      <div class="picture-cover">
+        <%= image_tag 'subject-detail-banner.jpg', class: 'responsive-img' %>
+      </div>
+      <div class="info-detail">
+        <h3>Groningen</h3>
+
+        <div class="points-info">
+          <span>單標點數：</span><span> <%= rand(1..50) %> 點</span>
+        </div>
+
+        <div class="product-link">
+          <a href="#">商品來源連結</a>
+        </div>
+
+        <div class="progress-info-wrapper">
+          <span>標案進度：</span>
+          <div class="progress">
+            <% progress = rand(5..100) %>
+            <div class="determinate" style="width: <%= progress %>%"></div>
+          </div>
+          <span class="progress-value">
+            <%= progress %>%
+          </span>
+        </div>
+
+        <span>截標時間：</span>
+        <div class="time-info-wrapper">
+          <div class="hour">
+            <span class='value'><%= rand(0..23).to_s.rjust(2, '0') %></span>
+            <span class="unit">hr</span>
+          </div>
+          <div class="minute">
+            <span class='value'><%= rand(0..59).to_s.rjust(2, '0') %></span>
+            <span class="unit">min</span>
+          </div>
+          <div class="second">
+            <span class='value'><%= rand(0..59).to_s.rjust(2, '0') %></span>
+            <span class="unit">sec</span>
+          </div>
+        </div>
+
+        <form action="#">
+          <div class="input-field col s6">
+            <input placeholder="" id="first_name" type="number" class="validate">
+            <label for="first_name">下標點數</label>
+          </div>
+          <button type="submit" class="btn">下標</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="subject-description-wrapper subjects-container">
+    <span>詳細資訊</span>
+    <h4>Groningen</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa consectetur non atque mollitia numquam neque nulla quae facere illum ab ea veniam eveniet rerum iste temporibus aliquid, fugiat doloremque ipsam sint! Modi qui repellendus aliquam, illum inventore odit sapiente adipisci doloribus perspiciatis, nesciunt velit dolores nostrum. Enim praesentium eveniet esse omnis eius, cum ipsam! Repellendus veritatis ratione ipsum labore numquam fugit ex quidem consequatur, dolore! Doloremque, dolorem at nesciunt repellendus nisi et aspernatur tempora. Commodi, quidem voluptatum consequuntur maiores cumque esse velit! Ut, neque quaerat dolorem, minima praesentium quas vitae eos illo fugiat inventore dolorum, harum obcaecati, nisi quasi ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea facilis quo rerum nam modi sunt sed id accusantium magnam perspiciatis recusandae quae iste, nihil ab officia, qui, quidem consectetur odio nemo ipsam animi obcaecati quas. Facere, nemo, debitis. Libero quo tenetur, ipsa laborum, rerum doloremque vel repudiandae iure accusantium quia adipisci sit omnis dolor minima itaque nam, aliquam iste corporis quis magni. Dicta vel in velit eius accusantium nesciunt odit porro similique laudantium, quam quisquam dignissimos magni voluptatibus, nemo saepe. Quisquam modi placeat quidem voluptates eaque rem laudantium velit adipisci facilis consequuntur, tempora odio cupiditate perferendis debitis esse non harum sequi error unde id. Officia quisquam corrupti, nesciunt, blanditiis fugiat quaerat ab. Odio deleniti obcaecati ab aspernatur amet corporis, laborum atque expedita, iusto eos et quidem, recusandae consequatur voluptatum maiores corrupti animi exercitationem labore sunt sit adipisci! Totam ducimus atque, sapiente quaerat sunt, velit aut repellat! Facere consequuntur repellat praesentium modi dignissimos non similique, quae voluptatum amet, perspiciatis ipsum dolores nesciunt nisi inventore, fugit! Porro enim adipisci officia aperiam non, doloremque reiciendis voluptas, qui omnis. Explicabo obcaecati iure et nesciunt ea, facilis expedita quod doloremque, non veritatis consequatur libero iste ducimus, cumque laudantium similique id a fugiat dolor est fugit.</p>
+  </div>
+</div>
+
+<%= render partial: 'common/footer' %>
