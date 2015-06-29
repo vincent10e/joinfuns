@@ -9,11 +9,11 @@
 ## -------------------------------------
 #= require jquery
 #= require jquery_ujs
-#= require turbolinks
-#= require vendor/_bootstrap
+#= require bootstrap/alert
+#= require materialize-sprockets
 #= require growlyflash
 #= require sweet-alert-confirm
-
+#= require turbolinks
 
 
 
