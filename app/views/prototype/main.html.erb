@@ -1,3 +1,14 @@
 <%= render partial: 'common/header' %>
 
+<div class="map-canvas" id="map">
+
+</div>
+
 <%= render partial: 'common/footer' %>
+
+<%= content_for :handwrite_js do %>
+  <script>
+    $(document).ready(JoinFuns.initialMap());
+    $(document).on('page:change', initialMap());
+  </script>
+<% end %>

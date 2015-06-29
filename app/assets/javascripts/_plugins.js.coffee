@@ -8,11 +8,14 @@
 ##   jQuery / helper plugins
 ## -------------------------------------
 #= require jquery
+#= require jquery.turbolinks
 #= require jquery_ujs
 #= require bootstrap/alert
 #= require materialize-sprockets
 #= require growlyflash
 #= require sweet-alert-confirm
+#= require underscore
+#= require gmaps/google
 #= require turbolinks
 
 

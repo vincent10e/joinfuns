@@ -13,8 +13,8 @@
           <input placeholder="Password" type="password" class="validate">
         </div>
 
-        <%= link_to main_path, class: 'submit-btn' do %>
-          <button>Sign in</button>
+        <%= link_to main_path, class: 'submit-btn', :'data-no-turbolink' => true do %>
+          <span>Sign in</span>
         <% end %>
         <!--
         <div class="submit-btn">

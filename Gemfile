@@ -91,3 +91,5 @@ gem 'omniauth-facebook'
 # maps and geocoding
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'jquery-turbolinks'

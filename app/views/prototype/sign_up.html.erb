@@ -44,8 +44,8 @@
         </p>
       </div>
 
-      <%= link_to main_path, class: 'submit-btn' do %>
-        <button>GO!</button>
+      <%= link_to main_path, class: 'submit-btn', :'data-no-turbolink' => true do %>
+        <span>GO!</span>
       <% end %>
       <!--
       <div class="submit-btn">
