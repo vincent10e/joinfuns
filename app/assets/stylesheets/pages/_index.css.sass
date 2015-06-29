@@ -148,17 +148,61 @@
 // subjects index
 .subjects-index-wrapper
   @extend .map-canvas
+  background-color: $white
   overflow: scroll
   .subjects-container
-    +container(1140px)
+    width: 1140px
+    @extend %m0auto
     +clearfix
     padding: 5px 0
   .subject-unit
     +span(3)
-    height: 320px
+    // height: 320px
     padding: 5px
   .subject-inner
     width: 100%
     height: 100%
     background-color: $white
-
+    +box-shadow(0 1px 2px $black-op50)
+    &:hover
+      +box-shadow(0 1px 8px $black-op70)
+  .subject-cover-wrapper
+    @extend %bg-cover-image
+    width: 100%
+    height: 160px
+  .subject-info-wrapper
+    padding: 1em
+    text-align: left
+    h3
+      margin: 0
+      padding: 0
+      font-size: $fz-l
+      font-weight: bold
+    .progress
+      height: 12px
+      margin-top: 1em
+      margin-bottom: .2em
+      background-color: $light-gray
+      +border-radius(50px)
+      border: 2px solid $dark-gray
+      .determinate
+        background-color: $yellow
+        +border-radius(50px)
+        border-right: 2px solid $dark-gray
+    .time-info-wrapper
+      +clearfix
+      color: $golden
+      text-align: center
+      .hour, .minute, .second
+        +span(4)
+        .value
+          display: block
+          font-size: 40px
+        .unit
+          font-size: $fz-xs
+    .get-button
+      margin-top: 1em
+      a
+        +sassy-button("flat", $v-radius, $fz-l, $light-gray)
+        width: 100%
+        text-align: center
