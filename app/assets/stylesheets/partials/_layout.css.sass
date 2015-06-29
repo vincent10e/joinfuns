@@ -56,8 +56,8 @@ html, body
 
 .main-navibar
   $logo-width: image-width('logo-white@2x.png') / 2
-  +box-sizing(content-box)
 
+  +box-sizing(content-box)
   position: relative
   height: $v-navi-height
   background-color: $yellow
@@ -99,6 +99,18 @@ html, body
       margin-top: -4px
       margin-left: .5em
       height: 30px
+
+.main-footer
+  position: absolute
+  bottom: 0
+  height: 27px
+  width: 100%
+  padding-top: 5px
+  padding-right: 2em
+  background-color: $black
+  color: $white
+  font-size: $fz-xs
+  text-align: right
 
 
 .map-canvas
