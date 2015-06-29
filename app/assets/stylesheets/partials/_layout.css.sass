@@ -28,6 +28,23 @@ html, body
   background-color: $c-panels
   margin-top: 1em
   +border-radius(6px)
+%landing-form-style
+  input, input:focus
+    margin-bottom: 0
+    padding: 3em
+    text-align: center
+    +box-sizing(border-box)
+    border-bottom: 1px solid $gray
+    +box-shadow(none)
+  .input-field
+    margin-top: 0
+  .submit-btn
+    display: block
+    padding: 1em
+    button
+      +sassy-button("flat", $v-radius, $fz-l, $yellow)
+      width: 100%
+      padding: 1em 0
 
 .application-container
   width: 100%

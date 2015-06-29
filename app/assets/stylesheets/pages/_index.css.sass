@@ -1,5 +1,5 @@
 // Landing page
-.landing-login-options-wrapper, .landing-sign-in-form-wrapper
+.landing-login-options-wrapper, .landing-sign-in-form-wrapper, .landing-sign-up-form-wrapper
   $login-options-panel-width: 415px
   $logo-width: image-width('logo@2x.png') / 2
 
@@ -12,10 +12,11 @@
   min-height: 200px
   z-index: index($elements, login-panel)
   color: $white
-
   .logo
     @extend %m0auto
     width: $logo-width
+
+.landing-login-options-wrapper
   .login-options-wrapper
     @extend %landing-panel-style
     padding: 1em
@@ -30,43 +31,29 @@
       +sassy-button("flat", $v-radius, $fz-l, $email-red)
       margin-top: 1em
 
-  .sign-in-form
-    @extend %landing-panel-style
-    form
-      .input-field
-        margin-top: 0
-      input, input:focus
-        margin-bottom: 0
-        padding: 3em
-        text-align: center
-        +box-sizing(border-box)
-        border-bottom: 1px solid $gray
-        +box-shadow(none)
-      .submit-btn
-        display: block
-        padding: 1em
-        button
-          +sassy-button("flat", $v-radius, $fz-l, $yellow)
-          width: 100%
-          padding: 1em 0
-
 .landing-divider
   width: 100%
   height: 1px
   background-color: $gray
 
-.sign-up-option-wrapper
-  margin-top: 1em
-  font-size: $fz-m
-  text-align: center
-  a
-    display: inline-block
-    position: relative
-    color: $white
-  .material-icons
-    margin-right: 8px
+.landing-sign-in-form-wrapper
+  .sign-in-form
+    @extend %landing-panel-style
+    form
+      @extend %landing-form-style
 
-.sign-up-link
+  .sign-up-option-wrapper
+    margin-top: 1em
+    font-size: $fz-m
+    text-align: center
+    a
+      display: inline-block
+      position: relative
+      color: $white
+    .material-icons
+      margin-right: 8px
+
+.landing-sign-up-link
   padding-top: 80px
   padding-bottom: 20px
   text-align: center
@@ -74,3 +61,44 @@
   a
     color: $white
     font-weight: 900
+
+.landing-sign-up-form-wrapper
+  width: 460px
+  .user-avatar
+    width: 95px
+    height: 95px
+    @extend %m0auto
+    img
+      +border-radius(50%)
+  .user-name
+    input, input:focus
+      text-align: center
+      border: none
+  .file-path-wrapper
+    visibility: hidden
+  .select-photo
+    height: 35px
+    line-height: 35px
+    background-color: $black-op70
+    +box-shadow(none)
+    +border-radius(50px)
+    @extend %m0auto
+    float: none
+    input
+      height: 35px
+  .file-path
+    height: 0
+    margin: 0
+
+  .sign-up-form
+    @extend %landing-panel-style
+    @extend %landing-form-style
+    input, input:focus
+      padding: 2em
+    .subscribe
+      padding-left: 1em
+      padding-right: 1em
+    .submit-btn
+      button
+        padding: .5em 0
+

@@ -1,0 +1,59 @@
+<div class="landing-sign-up-form-wrapper">
+  <div class="logo">
+    <%= image_tag 'logo@2x.png', class: 'responsive-img' %>
+  </div>
+
+  <div class="user-avatar">
+    <%= image_tag 'avatar-placeholder.gif', class: 'responsive-img' %>
+  </div>
+
+  <form action="#">
+    <div class="user-name">
+      <input type="text" value='John Doe' placeholder="Enter Your Name Here">
+    </div>
+    <div class="file-field input-field">
+      <div class="btn select-photo">
+        <span>change photo</span>
+        <input type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+
+    <div class="sign-up-form">
+      <div class="input-field">
+        <input placeholder="Email" type="text" class="validate">
+      </div>
+      <div class="input-field">
+        <input placeholder="Password" type="password" class="validate">
+      </div>
+      <div class="input-field">
+        <input placeholder="Confirm Password" type="password" class="validate">
+      </div>
+      <div class="input-field">
+        <input placeholder="Cell Phone" type="tel" class="validate">
+      </div>
+      <div class="input-field">
+        <input placeholder="Birthday" type="text" class="validate">
+      </div>
+      <div class="subscribe">
+        <p>
+          <input type="checkbox" id="test" checked="checked" />
+          <label for="test">Subscribe News</label>
+        </p>
+      </div>
+
+      <%= link_to main_path, class: 'submit-btn' do %>
+        <button>GO!</button>
+      <% end %>
+      <!--
+      <div class="submit-btn">
+        <button>
+          Sign in
+        </button>
+      </div>
+      -->
+
+    </div>
+  </form>
