@@ -6,6 +6,9 @@
     def sign_in
     end
 
+    def sign_up
+    end
+
     def main
     end
 
