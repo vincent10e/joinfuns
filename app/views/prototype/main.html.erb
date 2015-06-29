@@ -9,9 +9,13 @@
   </div>
 </div>
 
-<div class="event-demo" style="top: <%= rand(10..45) %>%; left: <%= rand(10..45) %>%;"></div>
-<div class="dm-demo" style="top: <%= rand(55..90) %>%; left: <%= rand(55..90) %>%;"></div>
+<% rand(1..8).times.each do %>
+  <div class="event-demo" style="top: <%= rand(10..45) %>%; left: <%= rand(10..45) %>%;"></div>
+<% end %>
 
+<% rand(1..8).times.each do %>
+  <div class="dm-demo" style="top: <%= rand(55..90) %>%; left: <%= rand(55..90) %>%;"></div>
+<% end %>
 
 <%= render partial: 'common/footer' %>
 
