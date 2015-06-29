@@ -126,3 +126,21 @@
     background-color: $black-op90
     +border-radius(100px)
 
+.event-demo, .dm-demo
+  position: absolute
+  cursor: pointer
+  @extend %bg-cover-image
+
+.event-demo
+  $icon-width: image-width('event-icon@2x.png') / 2
+  $icon-height: image-height('event-icon@2x.png') / 2
+  width: $icon-width
+  height: $icon-height
+  background-image: asset-url('event-icon@2x.png')
+.dm-demo
+  $icon-width: image-width('dm-icon@2x.png') / 2
+  $icon-height: image-height('dm-icon@2x.png') / 2
+  width: $icon-width
+  height: $icon-height
+  background-image: asset-url('dm-icon@2x.png')
+
