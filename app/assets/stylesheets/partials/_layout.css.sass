@@ -54,6 +54,53 @@ html, body
   z-index: index($elements, application-container)
   text-align: center
 
+.main-navibar
+  $logo-width: image-width('logo-white@2x.png') / 2
+  +box-sizing(content-box)
+
+  position: relative
+  height: $v-navi-height
+  background-color: $yellow
+  z-index: index($elements, main-navibar)
+  +box-shadow(none)
+  border-bottom: 5px solid darken($yellow, 20)
+  .logo-wrapper
+    +span(3)
+    height: $v-navi-height
+    padding-top: 3px
+    background-color: $darker-yellow
+    img
+      display: inline-block
+      width: $logo-width
+  .main-menu
+    li
+      +span(3)
+      height: $v-navi-height
+      border-left: 1px solid $white
+      line-height: $v-navi-height
+      a
+        color: $dark-gray
+        font-weight: 600
+    .user-menu-trigger a
+      display: inline-block
+      padding-top: 5px
+      width: auto
+
+    .user-avatar
+      display: block
+      float: left
+      width: 30px
+      height: 30px
+      img
+        border: 3px solid $white
+    .user-name
+      display: block
+      float: left
+      margin-top: -4px
+      margin-left: .5em
+      height: 30px
+
+
 .map-canvas
   width: 100%
   height: 100%

@@ -1,4 +1,21 @@
 <!-- header -->
-<header>
+<nav class="main-navibar">
+  <%= link_to main_path, class: 'logo-wrapper' do %>
+    <%= image_tag 'logo-white@2x.png' %>
+  <% end %>
 
-</header>
+  <div class="main-menu">
+    <ul>
+      <li><a href="#">Subject</a></li>
+      <li><a href="#">Create New</a></li>
+      <li class='user-menu-trigger'>
+        <a href="#">
+          <div class="user-avatar">
+            <%= image_tag 'avatar-placeholder.gif', class: 'responsive-img circle' %>
+          </div>
+          <span class="user-name">UserName</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
