@@ -3,7 +3,7 @@ lock '3.1.0'
 
 set :application, 'joinfuns'
 set :repo_url, 'git@github.com:oracle-design/joinfuns.git'
-set :deploy_to, '/home/deployer/joinfuns-beta'
+set :deploy_to, '/home/deployer/websites/joinfuns-alpha'
 
 set :linked_files, %w{config/database.yml}
 set :linked_files, %w{config/database.yml config/application.yml config/secrets.yml}
