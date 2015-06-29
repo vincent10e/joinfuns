@@ -12,4 +12,10 @@
     def main
     end
 
+    def subjects_index
+    end
+
+    def subject_show
+    end
+
   end
