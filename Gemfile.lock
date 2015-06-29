@@ -163,8 +163,10 @@ GEM
     font-awesome-sass (4.3.2.1)
       sass (~> 3.2)
     formatador (0.2.5)
+    geocoder (1.2.8)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     growlyflash (0.6.2)
       coffee-rails (>= 3.2.1)
       railties (>= 3.2, < 5.0)
@@ -430,6 +432,8 @@ DEPENDENCIES
   devise
   factory_girl_rails
   font-awesome-sass
+  geocoder
+  gmaps4rails
   growlyflash (= 0.6.2)
   guard-livereload
   guard-pow

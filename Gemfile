@@ -87,3 +87,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'omniauth'
 gem 'omniauth-facebook'
+
+# maps and geocoding
+gem 'geocoder'
+gem 'gmaps4rails'
