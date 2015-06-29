@@ -103,3 +103,26 @@
 
 
 // Main Page
+.user-position-marker
+  position: relative
+  z-index: index($elements, user-position-marker)
+  top: 50%
+  a
+    display: block
+    width: 25px
+    height: 25px
+    @extend %m0auto
+    background-image: asset-url('target@2x.png')
+    @extend %bg-cover-image
+  .i-am-here
+    position: relative
+    bottom: 100px
+    @extend %m0auto
+    width: 150px
+    padding: 1.5em
+    border: 2px solid $yellow
+    +box-shadow(0 0 5px $black)
+    color: $yellow
+    background-color: $black-op90
+    +border-radius(100px)
+

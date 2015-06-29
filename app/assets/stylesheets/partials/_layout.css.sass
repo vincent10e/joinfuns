@@ -100,6 +100,50 @@ html, body
       margin-left: .5em
       height: 30px
 
+.main-function-bar-wrapper
+  $function-bar-height: 35px
+
+  position: relative
+  height: $function-bar-height
+  background-color: $black-op85
+  border-bottom: 1px solid $silver
+  z-index: index($elements, main-function-bar)
+  color: $yellow
+  .filter-trigger
+    +span(3)
+    padding: 0 1em
+    height: $function-bar-height
+    line-height: $function-bar-height
+    text-align: left
+    .material-icons
+      margin-top: 5px
+  .search-form-wrapper
+    +span(9)
+    .search-form-input
+      +span(10)
+      padding: 4px 2em
+      border-right: 1px solid $gray
+      border-left: 1px solid $gray
+      input, input:focus
+        height: 24px
+        margin: 0
+        color: $white
+        +input-placeholder
+          text-align: center
+          color: darken($white, 30)
+        background-color: rgba($white, .1)
+        border: 1px solid darken($white, 50)
+        +border-radius(100px 100px)
+        text-align: center
+    .search-button
+      +span(2)
+      padding: 5px
+      button
+        height: 24px
+        line-height: 24px
+        background: none
+        border: none
+
 .main-footer
   position: absolute
   bottom: 0
@@ -115,8 +159,8 @@ html, body
 
 .map-canvas
   position: absolute
-  top: 0
+  top: 75px
   right: 0
-  bottom: 0
+  bottom: 27px
   left: 0
   background-color: #eee

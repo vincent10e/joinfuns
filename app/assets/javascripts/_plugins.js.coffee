@@ -8,7 +8,6 @@
 ##   jQuery / helper plugins
 ## -------------------------------------
 #= require jquery
-#= require jquery.turbolinks
 #= require jquery_ujs
 #= require bootstrap/alert
 #= require materialize-sprockets

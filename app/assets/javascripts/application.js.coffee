@@ -7,7 +7,7 @@
 #= require _plugins
 #= require _app-base
 
-JoinFuns.initialMap = () ->
+JoinFuns.initialMap = ->
 
   handler = Gmaps.build('Google')
 
@@ -26,7 +26,8 @@ JoinFuns.initialMap = () ->
       }
     }, ->
     if navigator.geolocation
-      navigator.geolocation.getCurrentPosition displayOnMap
+      navigator.geolocation.getCurrentPosition(displayOnMap)
+      return
     return
 
 
