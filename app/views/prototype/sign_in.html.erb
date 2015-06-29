@@ -1,0 +1,39 @@
+<div class="landing-sign-in-form-wrapper">
+  <div class="logo">
+    <%= image_tag 'logo@2x.png', class: 'responsive-img' %>
+  </div>
+
+  <div class="sign-in-form">
+    <div class="form">
+      <form action="#">
+        <div class="input-field">
+          <input placeholder="Username" type="text" class="validate">
+        </div>
+        <div class="input-field">
+          <input placeholder="Password" type="password" class="validate">
+        </div>
+
+        <%= link_to main_path, class: 'submit-btn' do %>
+          <button>Sign in</button>
+        <% end %>
+        <!--
+        <div class="submit-btn">
+          <button>
+            Sign in
+          </button>
+        </div>
+        -->
+      </form>
+    </div>
+  </div>
+
+  <div class="sign-up-option-wrapper">
+    <a href="#"><i class="material-icons left">help_outline</i> forget password</a>
+  </div>
+</div>
+
+<div class="landing-divider"></div>
+
+<div class="sign-up-link">
+  <span>Don't have an account? <a href="#">Sign Up</a></span>
+</div>
