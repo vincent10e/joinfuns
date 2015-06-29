@@ -22,13 +22,9 @@
           <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
       <![endif]-->
 
-  <%= render :partial => 'common/header' %>
-
-  <%= yield %>
-
-  <%= render :partial => 'common/footer' %>
-
-
+  <div class="application-container" style="background-image: url(<%= asset_url('landing-bg-2560.jpg') %>);">
+    <%= yield %>
+  </div>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, 'data-turbolinks-eval' => false %>
   <%= yield :handwrite_js %>

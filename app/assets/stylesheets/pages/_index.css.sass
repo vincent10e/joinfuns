@@ -1,0 +1,34 @@
+// Landing page
+.landing-login-options-wrapper
+  $login-options-panel-width: 415px
+  $logo-width: image-width('logo@2x.png') / 2
+
+  position: relative
+  @extend %m0auto
+  margin-top: 200px
+  width: $login-options-panel-width
+  min-height: 200px
+  z-index: index($elements, login-panel)
+  color: $white
+
+  .logo
+    @extend %m0auto
+    width: $logo-width
+  .login-options-wrapper
+    background-color: $c-panels
+    margin-top: 1em
+    padding: 1em
+    +border-radius(6px)
+
+    .facebook, .email
+      +sassy-button("flat", 10px, 19px, $facebook-blue)
+      width: 100%
+      height: 120px
+      line-height: 120px
+      text-align: center
+    .email
+      +sassy-button("flat", 10px, 19px, $email-red)
+      margin-top: 1em
+
+
+
