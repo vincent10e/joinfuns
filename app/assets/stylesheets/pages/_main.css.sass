@@ -29,7 +29,7 @@
   +span(3)
   float: none
   position: absolute
-  // left: -25% // hide out of canvas
+  left: -25% // hide out of canvas
   background-color: $black-op80
   top: 80px
   bottom: 27px
@@ -37,9 +37,14 @@
   overflow-x: hidden
   color: $white
   text-align: left
+
+  &.actived
+    left: 0
+
   .filter-section-wrapper
     position: relative
     border-bottom: 1px solid darken($yellow, 20)
+
   .filter-section
     padding: 1em
     border-bottom: 1px solid $gray

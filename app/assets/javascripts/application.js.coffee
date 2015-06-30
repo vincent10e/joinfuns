@@ -34,3 +34,22 @@ JoinFuns.initMaterialSelect = ->
   $ ->
     $('select').material_select()
     $(".dropdown-button").dropdown()
+
+JoinFuns.filterTriggerInit = ->
+  filterTrigger = $('.filter-trigger')
+
+  filterTrigger.on 'click', ->
+    triggerIcon = $(@).find('.material-icons')
+    filterPanel = $('.filter-panel-wrapper')
+
+    if filterPanel.hasClass('actived')
+      filterPanel.removeClass 'actived'
+      triggerIcon.html('expand_more')
+    else
+      filterPanel.addClass 'actived'
+      triggerIcon.html('expand_less')
+
+    return
+
+
+
