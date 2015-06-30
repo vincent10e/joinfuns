@@ -1,0 +1,43 @@
+// Main Page
+.user-position-marker
+  position: relative
+  z-index: index($elements, user-position-marker)
+  top: 50%
+  a
+    display: block
+    width: 25px
+    height: 25px
+    @extend %m0auto
+    background-image: asset-url('target@2x.png')
+    @extend %bg-cover-image
+  .i-am-here
+    position: relative
+    bottom: 100px
+    @extend %m0auto
+    width: 150px
+    padding: 1.5em
+    border: 2px solid $yellow
+    +box-shadow(0 0 5px $black)
+    color: $yellow
+    background-color: $black-op90
+    +border-radius(100px)
+
+.event-demo, .dm-demo
+  position: absolute
+  cursor: pointer
+  @extend %bg-cover-image
+  z-index: index($elements, map-event-dm)
+
+.event-demo
+  $icon-width: image-width('event-icon@2x.png') / 2
+  $icon-height: image-height('event-icon@2x.png') / 2
+  width: $icon-width
+  height: $icon-height
+  background-image: asset-url('event-icon@2x.png')
+.dm-demo
+  $icon-width: image-width('dm-icon@2x.png') / 2
+  $icon-height: image-height('dm-icon@2x.png') / 2
+  width: $icon-width
+  height: $icon-height
+  background-image: asset-url('dm-icon@2x.png')
+
