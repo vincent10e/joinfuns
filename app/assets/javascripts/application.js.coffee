@@ -30,27 +30,26 @@ JoinFuns.initialMap = ->
       return
     return
 
+JoinFuns.initMaterialSelect = ->
+  $ ->
+    $('select').material_select()
+    $(".dropdown-button").dropdown()
 
-  ready = ->
+JoinFuns.filterTriggerInit = ->
+  filterTrigger = $('.filter-trigger')
 
-    if $('.gmaps4rails_map').length > 0
-      $.getScript("http://maps.google.com/maps/api/js?v=3.9&sensor=false&client=&key=&libraries=geometry&language=&hl=&region=")
-      .success(->
-        $.ajax(
-          dataType: "script",
-          cache: true,
-          url: "http://maps.gstatic.com/cat_js/intl/de_de/mapfiles/api-3/12/17/%7Bmain,geometry%7D.js"
-        )
-        .success(->
-          Gmaps.loadMaps()
-        )
-      )
+  filterTrigger.on 'click', ->
+    triggerIcon = $(@).find('.material-icons')
+    filterPanel = $('.filter-panel-wrapper')
 
-      #
-      # This works, but fixes the google static server to de_de.
-      # Have a look at:
-      #   http://stackoverflow.com/questions/18775450/jquery-cross-domain-ajax-callback-when-executed
-      #
+    if filterPanel.hasClass('actived')
+      filterPanel.removeClass 'actived'
+      triggerIcon.html('expand_more')
+    else
+      filterPanel.addClass 'actived'
+      triggerIcon.html('expand_less')
 
-  $(document).ready(ready)
-  $(document).on('page:load', ready)
+    return
+
+
+

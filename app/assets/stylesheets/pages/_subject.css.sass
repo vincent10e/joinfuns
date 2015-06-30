@@ -1,0 +1,78 @@
+// subjects index
+.subjects-container
+  width: 1140px
+  @extend %m0auto
+  +clearfix
+  padding: 5px 0
+
+.subjects-index-wrapper
+  @extend .map-canvas
+  background-color: $white
+  overflow: scroll
+  .subject-unit
+    +span(3)
+    // height: 320px
+    padding: 5px
+  .subject-inner
+    width: 100%
+    height: 100%
+    background-color: $white
+    +box-shadow(0 1px 2px $black-op50)
+    &:hover
+      +box-shadow(0 1px 8px $black-op70)
+  .subject-cover-wrapper
+    @extend %bg-cover-image
+    width: 100%
+    height: 160px
+  .subject-info-wrapper
+    padding: 1em
+    text-align: left
+    @extend %subject-info-basic
+    .get-button
+      margin-top: 1em
+      a
+        +sassy-button("flat", $v-radius, $fz-l, $light-gray)
+        width: 100%
+        text-align: center
+
+// subject detail
+.subject-detail-wrapper
+  @extend .map-canvas
+  background-color: $white
+  overflow: scroll
+  .navigation-option
+    +clearfix
+    margin: 1em 0
+  .back-to-list
+    background-color: $black
+
+  .subject-info-banner
+    .picture-cover
+      +span(8)
+    .info-detail
+      +span(4)
+      padding: 0 1em
+      text-align: left
+      @extend %subject-info-basic
+      h3
+        font-size: $fz-xl
+      .points-info
+        margin-top: 1em
+      .product-link
+        a
+          color: $red
+      .progress-info-wrapper
+        margin-top: 1em
+        margin-bottom: 1em
+        .progress
+          margin-top: 0
+  form
+    margin-top: 2em
+    .btn
+      width: 100%
+      background-color: #D00F4A
+
+.subject-description-wrapper
+  border-top: 1px solid $light-gray
+  color: $dark-gray
+  text-align: left

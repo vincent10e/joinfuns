@@ -1,0 +1,135 @@
+// Main Page
+.user-position-marker
+  position: relative
+  height: 0
+  z-index: index($elements, user-position-marker)
+  top: 50%
+  a
+    display: block
+    width: 25px
+    height: 25px
+    @extend %m0auto
+    background-image: asset-url('target@2x.png')
+    @extend %bg-cover-image
+  .i-am-here
+    position: relative
+    bottom: 100px
+    @extend %m0auto
+    width: 150px
+    padding: 1.5em
+    border: 2px solid $yellow
+    +box-shadow(0 0 5px $black)
+    color: $yellow
+    background-color: $black-op90
+    +border-radius(100px)
+
+.filter-panel-wrapper
+  $submit-btn-height: 55px
+
+  +span(3)
+  float: none
+  position: absolute
+  left: -25% // hide out of canvas
+  background-color: $black-op80
+  top: 80px
+  bottom: 27px
+  z-index: index($elements, filter-panel)
+  overflow-x: hidden
+  color: $white
+  text-align: left
+
+  &.actived
+    left: 0
+
+  .filter-section-wrapper
+    position: relative
+    border-bottom: 1px solid darken($yellow, 20)
+
+  .filter-section
+    padding: 1em
+    border-bottom: 1px solid $gray
+    &:last-child
+      border: none
+
+    h4
+      font-size: $fz-l
+      margin: 0
+      padding: 0
+
+    a
+      display: block
+      height: 3rem
+      line-height: 3rem
+      color: $light-gray
+      .material-icons
+        color: $yellow
+        margin-top: 10px
+
+    input, input:focus
+      border: none
+      margin: 0
+      +box-shadow(none)
+
+    .range-field
+      margin: 0
+      input[type=range], input[type=range]:-moz-focusring
+        border: none
+        outline: none
+      input[type=range]::-webkit-slider-thumb
+        background-color: $yellow
+      input[type=range] + .thumb
+        background-color: $yellow
+      input[type=range]::-moz-range-thumb
+        background-color: $yellow
+
+    .select-wrapper span.caret
+      color: $yellow
+      right: 15px
+
+    .select-dropdown
+      border: 1px solid $yellow
+      +border-radius(10px)
+      text-align: center
+      color: $yellow
+
+    .dropdown-content
+      background-color: $black-op80
+      text-align: center
+      & li > span
+        text-align: center
+        color: $yellow
+      & li.active, & li:hover
+        background-color: lighten($black-op80, 55)
+
+  .filter-submit-btn
+    width: 100%
+    margin-top: 2em
+    button
+      width: 100%
+      height: $submit-btn-height
+      line-height: $submit-btn-height
+      background-color: darken($yellow, 10)
+
+
+
+.event-demo, .dm-demo
+  position: absolute
+  cursor: pointer
+  @extend %bg-cover-image
+  z-index: index($elements, map-event-dm)
+
+.event-demo
+  $icon-width: image-width('event-icon@2x.png') / 2
+  $icon-height: image-height('event-icon@2x.png') / 2
+
+  width: $icon-width
+  height: $icon-height
+  background-image: asset-url('event-icon@2x.png')
+.dm-demo
+  $icon-width: image-width('dm-icon@2x.png') / 2
+  $icon-height: image-height('dm-icon@2x.png') / 2
+
+  width: $icon-width
+  height: $icon-height
+  background-image: asset-url('dm-icon@2x.png')
+
