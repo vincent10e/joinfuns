@@ -29,3 +29,8 @@ JoinFuns.initialMap = ->
       navigator.geolocation.getCurrentPosition(displayOnMap)
       return
     return
+
+JoinFuns.initMaterialSelect = ->
+  $ ->
+    $('select').material_select()
+    $(".dropdown-button").dropdown()
