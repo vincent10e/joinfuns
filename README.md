@@ -13,6 +13,10 @@
         ├── application.yml
         ├── database.yml
         └── secrets.yml
+
+ # 可以先把 shared 資料夾放到專案中
+ # 再利用 [ ln shared/config/application.yml config/ ] 的方式
+ # 建立 hard link
 ```
 
 1. 確認 local 有安裝 node.js
