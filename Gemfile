@@ -87,6 +87,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'simple_form'
 
 # maps and geocoding
 gem 'geocoder'
